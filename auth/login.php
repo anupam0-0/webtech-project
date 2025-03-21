@@ -29,8 +29,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
+<style>
+    body {
+        position: relative;
+        top: -4.5rem;
+    }
+</style>
+
 <form action="" method="POST">
+    <div class="login-container">
+    <h2>Login</h2>
     <input type="email" name="email" required placeholder="Email">
     <input type="password" name="password" required placeholder="Password">
     <button type="submit">Login</button>
+    <a href="signup.php">Signup</a>
+    </div>
 </form>

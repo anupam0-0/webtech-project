@@ -21,7 +21,7 @@ if (!empty($wishlist_items)) {
 <head>
     <meta charset="UTF-8">
     <title>Wishlist</title>
-    <link rel="stylesheet" href="css/style.wishlist.css">
+    <link rel="stylesheet" href="css/wishlist.css">
 </head>
 
 <body>

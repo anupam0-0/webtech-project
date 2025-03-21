@@ -1,12 +1,18 @@
 /* Wishlist Page Styling */
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center; 
+    width: 100%; 
+
+}
+
 .wishlist-container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #f9f9f9;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    min-height: 82vh;
+    padding: 0em 5em;
 }
 
 .wishlist-container h2 {
@@ -23,14 +29,14 @@
     display: inline-block;
     margin-top: 10px;
     padding: 10px 15px;
-    background: #007bff;
-    color: #fff;
+    background: #eeeeee;
+    color: #111;
     text-decoration: none;
     border-radius: 5px;
 }
 
 .continue-shopping:hover {
-    background: #0056b3;
+    background: #dddddd;
 }
 
 .wishlist-list {

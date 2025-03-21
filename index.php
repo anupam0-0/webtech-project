@@ -11,14 +11,21 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <title>E-Commerce Home</title>
-    <link rel="stylesheet" href="css/style.index.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <style>
+        body {
+            background-color: #eee;
+        }
+    </style> -->
+
+
 </head>
 <body>
 
-    <h1>Welcome to Our Store,  <?php echo $_SESSION["user_name"]; ?>!</h1>
-    <a href="cart_view.php">🛒 View Cart</a>
+    <h1>Welcome to Our Store <span style="display:none"  >,  <?php echo $_SESSION["user_name"]; ?> </span>!</h1>
+    <!-- <a href="cart_view.php">🛒 View Cart</a>
     <a href="wishlist_view.php">❤️ View Wishlist</a>
-    <a href="dashboard.php">Dashboard</a>
+    <a href="dashboard.php">Dashboard</a> -->
 
 
     <div class="products">
