@@ -20,9 +20,8 @@ if ($conn->connect_error) {
         gap: 1rem;
         border-bottom: 1px solid rgba(0,0,0,0.1);
         width: 100%;
-        margin: auto;
+        margin: 0.5em auto;
         max-width: 80em;
-
     '>
 
         <div>
