@@ -71,9 +71,9 @@ h1 {
     border-radius: 8px;
 }
 
-.product h3 {
+.product h2 {
     font-size: 22px;
-    margin: 32px 0 0 0;
+    margin: 30px 0 0 0;
     color: #333;
     letter-spacing: 0.6px;
 }
@@ -102,10 +102,11 @@ h1 {
 
 .products-grid{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    /* flex-wrap: wrap; */
+    justify-content: flex-start;
     gap: 20px;
     padding: 0px 3rem;
     /* border: 1px solid #111; */
-    height: 22rem; /* temporary fix */
+    /* height: 22rem; temporary fix */
+    overflow-x: auto;
 }

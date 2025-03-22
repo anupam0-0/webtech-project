@@ -40,6 +40,7 @@ if (!empty($cart_items)) {
                         <th>Product</th>
                         <th>Name</th>
                         <th>Price</th>
+                        <th>Sizes</th>
                         <th>Quantity</th>
                         <th>Total</th>
                         <th>Action</th>
@@ -54,7 +55,10 @@ if (!empty($cart_items)) {
                             <td id="img-td"><img src="images/<?php echo $product["image"]; ?>"
                                     alt="<?php echo $product["name"]; ?>"></td>
                             <td><?php echo $product["name"]; ?></td>
-                            <td>$<?php echo $product["price"]; ?></td>
+                            <td>$<?php echo $product["price"]; ?> </td>
+                            <td><?php echo $product["size"]; ?></td>
+                            </td>
+
                             <td>
                                 <form action="cart_update.php" method="POST" style="display:inline;">
                                     <input type="hidden" name="product_id" value="<?php echo $product["id"]; ?>">

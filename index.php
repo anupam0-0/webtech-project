@@ -39,7 +39,7 @@ $redbullProducts = fetchProductsByBrand($conn, "redbull");
         <?php while ($row = $result->fetch_assoc()) { ?>
             <div class="product">
                 <img src="images/<?php echo $row['image']; ?>" alt="<?php echo $row['name']; ?>">
-                <h3><?php echo $row['name']; ?></h3>
+                <h2><?php echo $row['name']; ?></h2>
                 <p>₹<?php echo $row['price']; ?></p>
                 <a href="product.php?id=<?php echo $row['id']; ?>">View Details</a>
             </div>
@@ -60,7 +60,7 @@ $redbullProducts = fetchProductsByBrand($conn, "redbull");
             <?php while ($row = $ferrariProducts->fetch_assoc()) { ?>
                 <div class="product">
                     <img src="images/<?php echo $row['image']; ?>" alt="Ferrari Product">
-                    <p><strong><?php echo $row['name']; ?></strong></p>
+                    <h3><strong><?php echo $row['name']; ?></strong></h3>
                     <p>Price: $<?php echo $row['price']; ?></p>
                     <a href="product.php?id=<?php echo $row['id']; ?>">View Details</a>
 
@@ -73,7 +73,7 @@ $redbullProducts = fetchProductsByBrand($conn, "redbull");
             <?php while ($row = $mercedesProducts->fetch_assoc()) { ?>
                 <div class="product">
                     <img src="images/<?php echo $row['image']; ?>" alt="Mercedes Product">
-                    <p><strong><?php echo $row['name']; ?></strong></p>
+                    <h3><strong><?php echo $row['name']; ?></strong></h3>
                     <p>Price: $<?php echo $row['price']; ?></p>
                     <a href="product.php?id=<?php echo $row['id']; ?>">View Details</a>
 
@@ -86,7 +86,7 @@ $redbullProducts = fetchProductsByBrand($conn, "redbull");
             <?php while ($row = $redbullProducts->fetch_assoc()) { ?>
                 <div class="product">
                     <img src="images/<?php echo $row['image']; ?>" alt="Red Bull Product">
-                    <p><strong><?php echo $row['name']; ?></strong></p>
+                    <h3><strong><?php echo $row['name']; ?></strong></h3>
                     <p>Price: $<?php echo $row['price']; ?></p>
                     <a href="product.php?id=<?php echo $row['id']; ?>">View Details</a>
                 </div>
