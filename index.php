@@ -33,7 +33,7 @@ $result = $conn->query($sql);
             <div class="product">
                 <img src="images/<?php echo $row['image']; ?>" alt="<?php echo $row['name']; ?>">
                 <h3><?php echo $row['name']; ?></h3>
-                <p>$<?php echo $row['price']; ?></p>
+                <p>₹<?php echo $row['price']; ?></p>
                 <a href="product.php?id=<?php echo $row['id']; ?>">View Details</a>
             </div>
         <?php } ?>

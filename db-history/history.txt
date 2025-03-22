@@ -61,3 +61,15 @@ INSERT INTO products (name, description, price, image) VALUES
 ('Laptop', 'A powerful laptop for work and gaming.', 899.99, 'laptop.jpg'),
 ('Smartphone', 'Latest 5G smartphone with amazing features.', 699.99, 'smartphone.jpg'),
 ('Headphones', 'Noise-canceling wireless headphones.', 199.99, 'headphones.jpg');
+
+-- review
+CREATE TABLE reviews (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    product_id INT NOT NULL,
+    rating INT CHECK (rating BETWEEN 1 AND 5), -- Rating from 1 to 5
+    review TEXT NOT NULL,
+    review_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (product_id) REFERENCES products(id)
+);

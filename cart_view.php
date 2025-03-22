@@ -18,63 +18,77 @@ if (!empty($cart_items)) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Shopping Cart</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
 </head>
+
 <body>
+    <main>
 
-    <h2>Your Shopping Cart</h2>
+        <h1>Your Shopping Cart</h1>
+        <div class="cart-container">
 
-    <?php if (empty($products)) { ?>
-        <p>Your cart is empty.</p>
-        <a href="index.php">Continue Shopping</a>
-    <?php } else { ?>
-        <table>
-            <tr>
-                <th>Product</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Total</th>
-                <th>Action</th>
-            </tr>
-            <?php 
-            $total_price = 0;
-            foreach ($products as $product) { 
-                $total = $product["price"] * $product["quantity"];
-                $total_price += $total;
-            ?>
-                <tr>
-                    <td><?php echo $product["name"]; ?></td>
-                    <td>$<?php echo $product["price"]; ?></td>
-                    <td>
-                        <form action="cart_update.php" method="POST" style="display:inline;">
-                            <input type="hidden" name="product_id" value="<?php echo $product["id"]; ?>">
-                            <button type="submit" name="action" value="decrement">-</button>
-                        </form>
+            <?php if (empty($products)) { ?>
+                <p id="cart-empty-text">Your cart is empty.</p>
+                <a href="index.php" id="continue-shopping-text">Continue Shopping</a>
+            <?php } else { ?>
+                <table>
+                    <tr id="table-header">
+                        <th>Product</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                    <?php
+                    $total_price = 0;
+                    foreach ($products as $product) {
+                        $total = $product["price"] * $product["quantity"];
+                        $total_price += $total;
+                        ?>
+                        <tr class="product-row">
+                            <td id="img-td"><img src="images/<?php echo $product["image"]; ?>"
+                                    alt="<?php echo $product["name"]; ?>"></td>
+                            <td><?php echo $product["name"]; ?></td>
+                            <td>$<?php echo $product["price"]; ?></td>
+                            <td>
+                                <form action="cart_update.php" method="POST" style="display:inline;">
+                                    <input type="hidden" name="product_id" value="<?php echo $product["id"]; ?>">
+                                    <button type="submit" name="action" value="decrement">-</button>
+                                </form>
 
-                        <?php echo $product["quantity"]; ?>
+                                <?php echo $product["quantity"]; ?>
 
-                        <form action="cart_update.php" method="POST" style="display:inline;">
-                            <input type="hidden" name="product_id" value="<?php echo $product["id"]; ?>">
-                            <button type="submit" name="action" value="increment">+</button>
-                        </form>
-                    </td>
-                    <td>$<?php echo $total; ?></td>
-                    <td>
-                        <form action="cart_remove.php" method="POST">
-                            <input type="hidden" name="product_id" value="<?php echo $product["id"]; ?>">
-                            <button type="submit">Remove</button>
-                        </form>
-                    </td>
-                </tr>
+                                <form action="cart_update.php" method="POST" style="display:inline;">
+                                    <input type="hidden" name="product_id" value="<?php echo $product["id"]; ?>">
+                                    <button type="submit" name="action" value="increment">+</button>
+                                </form>
+                            </td>
+                            <td>$<?php echo $total; ?></td>
+                            <td>
+                                <form action="cart_remove.php" method="POST">
+                                    <input type="hidden" name="product_id" value="<?php echo $product["id"]; ?>">
+                                    <button type="submit">Remove</button>
+                                </form>
+                            </td>
+                        </tr>
+                    <?php } ?>
+                </table>
+
+                <h3 id="total-amt">Total Price: $<?php echo $total_price; ?></h3>
+                <div class="proceed-container">
+                    <a href="checkout.php" class="proceed">Proceed to Checkout</a>
+                    <a href="index.php" class="continue-shopping">Continue Shopping</a>
+
+                </div>
             <?php } ?>
-        </table>
-
-        <h3>Total Price: $<?php echo $total_price; ?></h3>
-        <a href="checkout.php">Proceed to Checkout</a>
-    <?php } ?>
+        </div>
+    </main>
 
 </body>
+
 </html>

@@ -42,15 +42,17 @@ if (!empty($wishlist_items)) {
                             <span class="wishlist-price">$<?php echo $product["price"]; ?></span>
                         </div>
 
-                        <form action="cart.php" method="POST" class="wishlist-buttons">
-                            <input type="hidden" name="product_id" value="<?php echo $product["id"]; ?>">
-                            <button type="submit" class="add-to-cart-btn">Add to Cart</button>
-                        </form>
+                        <div class="button-container">
+                            <form action="cart.php" method="POST" class="wishlist-buttons">
+                                <input type="hidden" name="product_id" value="<?php echo $product["id"]; ?>">
+                                <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                            </form>
 
-                        <form action="wishlist_remove.php" method="POST" class="wishlist-buttons">
-                            <input type="hidden" name="product_id" value="<?php echo $product["id"]; ?>">
-                            <button type="submit" class="remove-btn">Remove </button>
-                        </form>
+                            <form action="wishlist_remove.php" method="POST" class="wishlist-buttons">
+                                <input type="hidden" name="product_id" value="<?php echo $product["id"]; ?>">
+                                <button type="submit" class="remove-btn">Remove </button>
+                            </form>
+                        </div>
                     </li>
                 <?php } ?>
             </ul>

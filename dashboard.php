@@ -14,12 +14,15 @@ $result = $conn->query($sql);
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Dashboard - Order History</title>
     <link rel="stylesheet" href="css/dashboard.css">
 </head>
+
 <body>
+    <main></main>
 
     <div class="dashboard-container">
         <h2>Order History 📜</h2>
@@ -50,5 +53,19 @@ $result = $conn->query($sql);
         <?php } ?>
     </div>
 
+
+    <div>
+
+        <form action="auth/logout.php" method="POST">
+            <label for="logout">Logout</label>
+            <button type="submit" id="logout">Logout</button>
+        </form>
+    </div>
+
+
+
+    </main>
+
 </body>
+
 </html>
