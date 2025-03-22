@@ -17,7 +17,7 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <title>Dashboard - Order History</title>
-    <link rel="stylesheet" href="css/style.dashboard.css">
+    <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
 
