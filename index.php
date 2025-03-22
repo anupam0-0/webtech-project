@@ -31,9 +31,9 @@ $redbullProducts = fetchProductsByBrand($conn, "redbull");
     <a href="wishlist_view.php">❤️ View Wishlist</a>
     <a href="dashboard.php">Dashboard</a> -->
 
-    <div class="f1-banner-div">
+    <form class="f1-banner-div">
         <img class="f1-banner" src="images/f1banner.svg" alt="f1-banner">
-    </div>
+    </form>
 
     <div class="products">
         <?php while ($row = $result->fetch_assoc()) { ?>
@@ -63,7 +63,6 @@ $redbullProducts = fetchProductsByBrand($conn, "redbull");
                     <h3><strong><?php echo $row['name']; ?></strong></h3>
                     <p>Price: $<?php echo $row['price']; ?></p>
                     <a href="product.php?id=<?php echo $row['id']; ?>">View Details</a>
-
                 </div>
             <?php } ?>
         </div>
