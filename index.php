@@ -20,16 +20,13 @@ $redbullProducts = fetchProductsByBrand($conn, "redbull");
 
 <head>
     <meta charset="UTF-8">
-    <title>E-Commerce Home</title>
+    <title>F1 Store</title>
+    <link rel="icon" href="./images/f1-teams.jpg" type="image/icon type">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <!-- <h1>Welcome to Our Store <span style="display:none"  >,  <?php echo $_SESSION["user_name"]; ?> </span>!</h1> -->
-    <!-- <a href="cart_view.php">🛒 View Cart</a>
-    <a href="wishlist_view.php">❤️ View Wishlist</a>
-    <a href="dashboard.php">Dashboard</a> -->
 
     <form class="f1-banner-div">
         <img class="f1-banner" src="images/f1banner.svg" alt="f1-banner">
@@ -55,42 +52,51 @@ $redbullProducts = fetchProductsByBrand($conn, "redbull");
 
 
     <div class="categories">
+        <!-- <div class="ferrari-banner">
+            <img src="https://images.ctfassets.net/p85mj7v2zszd/1JSv5TriJ4QtuXisPSgPQX/4f884ed3189d6af58f00688f73621161/New_Hero_H1_D.jpg?w=2880&h=1406&fm=webp" alt="">
+
+        </div> -->
         <h2>Ferrari Collection</h2>
         <div class="products-grid">
             <?php while ($row = $ferrariProducts->fetch_assoc()) { ?>
                 <div class="product">
                     <img src="images/<?php echo $row['image']; ?>" alt="Ferrari Product">
-                    <h3><strong><?php echo $row['name']; ?></strong></h3>
-                    <p>Price: $<?php echo $row['price']; ?></p>
+                    <h3><?php echo $row['name']; ?></h3>
+                    <p>₹ <?php echo $row['price']; ?></p>
                     <a href="product.php?id=<?php echo $row['id']; ?>">View Details</a>
                 </div>
             <?php } ?>
         </div>
+        <button class="view-more">View More</button>
+
 
         <h2>Mercedes Collection</h2>
         <div class="products-grid">
             <?php while ($row = $mercedesProducts->fetch_assoc()) { ?>
                 <div class="product">
                     <img src="images/<?php echo $row['image']; ?>" alt="Mercedes Product">
-                    <h3><strong><?php echo $row['name']; ?></strong></h3>
-                    <p>Price: $<?php echo $row['price']; ?></p>
+                    <h3><?php echo $row['name']; ?></h3>
+                    <p>₹ <?php echo $row['price']; ?></p>
                     <a href="product.php?id=<?php echo $row['id']; ?>">View Details</a>
-
                 </div>
             <?php } ?>
         </div>
+        <button class="view-more">View More</button>
+
 
         <h2>Red Bull Collection</h2>
         <div class="products-grid">
             <?php while ($row = $redbullProducts->fetch_assoc()) { ?>
                 <div class="product">
                     <img src="images/<?php echo $row['image']; ?>" alt="Red Bull Product">
-                    <h3><strong><?php echo $row['name']; ?></strong></h3>
-                    <p>Price: $<?php echo $row['price']; ?></p>
+                    <h3><?php echo $row['name']; ?></h3>
+                    <p>₹ <?php echo $row['price']; ?></p>
                     <a href="product.php?id=<?php echo $row['id']; ?>">View Details</a>
                 </div>
             <?php } ?>
         </div>
+        <button class="view-more">View More</button>
+
     </div>
 </body>
 

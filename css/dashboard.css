@@ -1,11 +1,15 @@
-body {
+*{
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff;
-    text-align: center;
-    /* display: flex;
-    justify-content: center; */
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    max-width: 80rem;
+    min-height: 82vh;
+    margin: auto;
 }
 
 /* Dashboard Styling */
@@ -21,11 +25,6 @@ body {
     /* max-width: 80vw;  */
 }
 
-.success-message {
-    color: green;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
 
 .order-table {
     width: 100%;
@@ -41,4 +40,19 @@ body {
 
 .order-table th {
     background: #f0f0f0;
+}
+
+.logout-container{
+    text-align: center;
+
+}
+
+
+.logout-container button{
+    padding: 5px 8px;
+    background: #f00;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }

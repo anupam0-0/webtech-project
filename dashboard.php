@@ -22,7 +22,11 @@ $result = $conn->query($sql);
 </head>
 
 <body>
-    <main></main>
+    <main>
+        <?php 
+            
+        ?> 
+    </main>
 
     <div class="dashboard-container">
         <h2>Order History 📜</h2>
@@ -54,10 +58,9 @@ $result = $conn->query($sql);
     </div>
 
 
-    <div>
-
+    <div class="logout-container">
         <form action="auth/logout.php" method="POST">
-            <label for="logout">Logout</label>
+            <label for="logout">Logout: </label>
             <button type="submit" id="logout">Logout</button>
         </form>
     </div>

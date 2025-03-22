@@ -1,11 +1,10 @@
-body {
-    font-family: Arial, sans-serif;
+*{
+    /* font-family: Arial, sans-serif; */
     margin: 0;
     padding: 0;
-    background-color: #fff;
-    color: #111;
-    width: 100%;
+    box-sizing: border-box;
 }
+
 
 h1 {
     text-align: center;
@@ -38,9 +37,12 @@ h1 {
     object-fit: cover;
     border-radius: 8px;
     margin: auto;
-    padding: 10px 0px 0px 15px;
+    padding: 10px 0px;
 }
 
+.categories h2{
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 .products {
     display: flex;
@@ -55,12 +57,15 @@ h1 {
     background: white;
     border-radius: 10px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
-    padding: 25 15px;
+    padding: 25px 15px;
     flex: 1 1 calc(25% - 20px);
     min-width: 200px;
-    max-width: 250px;
-    font-family: monospace;
+    max-width: 280px;
+    font-family:monospace;
     line-height: 15px;
+    flex: display;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 
@@ -69,26 +74,28 @@ h1 {
     height: 200px;
     object-fit: contain;
     border-radius: 8px;
+    margin-bottom: 30px;
 }
 
-.product h2 {
-    font-size: 22px;
-    margin: 30px 0 0 0;
+.product h3 {
+    font-size: 19px;
+    margin: 10px 0px;
+    font-weight: 500;
     color: #333;
-    letter-spacing: 0.6px;
+    line-height: 20px;
 }
 
 .product p {
-    font-size: 14px;
+    font-size: 15px;
     color: #111;
     font-weight: 500;
-    letter-spacing: 0.8px;
+    margin: 10px 0px;
 }
 
 .product a {
-    display: inline-block;
     color: #111;
     font-size: 16px;
+    letter-spacing: 0.8px;
 }
 
 .categories{
@@ -101,8 +108,13 @@ h1 {
     margin: 0 auto;
 }
 
+.categories h2{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 .products-grid{
-    margin-top: -30px;
+    margin-top: 0px;
     display: flex;
     /* flex-wrap: wrap; */
     justify-content: flex-start;
@@ -110,4 +122,28 @@ h1 {
     width: 85vw;
     overflow-x: auto;
     padding: 5px;
+}
+
+.view-more{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    margin-top: -10px;
+    margin-bottom: 40px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: 0px;
+    font-size: 16px;
+    background-color: #222;
+    color: #eee;
+    cursor: pointer;
+    transition: 0.2s;
+    cursor: pointer;
+
+}
+
+.view-more:hover{
+    background-color: rgb(231, 0, 0);
+    color: white
 }
