@@ -82,27 +82,33 @@ ADD COLUMN brand VARCHAR(100) NOT NULL,
 MODIFY COLUMN size ENUM('default', 's', 'm', 'l', 'xl') NOT NULL DEFAULT 'default';
 
 -- some products
-INSERT INTO products (name, brand, category, size, price, image) VALUES
-('Ferrari Red T-Shirt', 'ferrari', 'tshirt', 'm', 25.99, 'ferrari.png'),
-('Mercedes Black T-Shirt', 'mercedes', 'tshirt', 'l', 22.99, 'mercedes_tshirt.jpg'),
-('Red Bull Racing Cap', 'redbull', 'cap', 'default', 18.99, 'redbull_cap.jpg'),
-('Ferrari Sports Jacket', 'ferrari', 'jacket', 'xl', 79.99, 'ferrari_jacket.jpg'),
-('Mercedes Grey Cap', 'mercedes', 'cap', 'default', 19.99, 'mercedes_cap.jpg'),
+INSERT INTO products (name, brand, category, price, image) VALUES
+('Ferrari Red T-Shirt', 'ferrari', 'tshirt', 8025.99, 'ferrari.png'),
+('Mercedes Black T-Shirt', 'mercedes', 'tshirt', 6022.99, 'mercedes_tshirt.jpg'),
+('Red Bull Racing Cap', 'redbull', 'cap', 6018.99, 'redbull_cap.jpg'),
+('Ferrari Sports Jacket', 'ferrari', 'jacket',  6079.99, 'ferrari_jacket.jpg'),
+('Mercedes Grey Cap', 'mercedes', 'cap',  6019.99, 'mercedes_cap.jpg'),
 
-('Red Bull Blue Jacket', 'redbull', 'jacket', 'm', 89.99, 'redbull_jacket.jpg'),
-('Ferrari Polo T-Shirt', 'ferrari', 'tshirt', 's', 29.99, 'ferrari_polo.jpg'),
-('Mercedes White Jacket', 'mercedes', 'jacket', 'l', 95.99, 'mercedes_jacket.jpg'),
-('Red Bull Casual T-Shirt', 'redbull', 'tshirt', 'm', 20.99, 'redbull_tshirt.jpg'),
-('Ferrari Limited Edition Cap', 'ferrari', 'cap', 'default', 27.99, 'ferrari_cap.jpg'),
+('Red Bull Blue Jacket', 'redbull', 'jacket', 6089.99, 'redbull_jacket.jpg'),
+('Ferrari Polo T-Shirt', 'ferrari', 'tshirt', 6029.99, 'ferrari_polo.jpg'),
+('Mercedes White Jacket', 'mercedes', 'jacket',  6095.99, 'mercedes_jacket.jpg'),
+('Red Bull Casual T-Shirt', 'redbull', 'tshirt', 6020.99, 'redbull_tshirt.jpg'),
+('Ferrari Limited Edition Cap', 'ferrari', 'cap',  6027.99, 'ferrari_cap.jpg'),
 
-('Mercedes Performance Jacket', 'mercedes', 'jacket', 'xl', 120.99, 'mercedes_performance_jacket.jpg'),
-('Red Bull Official Racing Jacket', 'redbull', 'jacket', 'l', 129.99, 'redbull_racing_jacket.jpg'),
-('Ferrari Track Jacket', 'ferrari', 'jacket', 'm', 110.99, 'ferrari_track_jacket.jpg'),
-('Mercedes Premium T-Shirt', 'mercedes', 'tshirt', 's', 35.99, 'mercedes_premium_tshirt.jpg'),
-('Red Bull Driver Cap', 'redbull', 'cap', 'default', 22.99, 'redbull_driver_cap.jpg'),
+('Mercedes Performance Jacket', 'mercedes', 'jacket', 60120.99, 'mercedes_performance_jacket.jpg'),
+('Red Bull Official Racing Jacket', 'redbull', 'jacket', 60129.99, 'redbull_racing_jacket.jpg'),
+('Ferrari Track Jacket', 'ferrari', 'jacket',  60110.99, 'ferrari_track_jacket.jpg'),
+('Mercedes Premium T-Shirt', 'mercedes', 'tshirt', 6035.99, 'mercedes_premium_tshirt.jpg'),
+('Red Bull Driver Cap', 'redbull', 'cap', 6022.99, 'redbull_driver_cap.jpg'),
 
-('Ferrari Team Hoodie', 'ferrari', 'jacket', 'xl', 99.99, 'ferrari_hoodie.jpg'),
-('Mercedes Official Cap', 'mercedes', 'cap', 'default', 24.99, 'mercedes_official_cap.jpg'),
-('Red Bull Softshell Jacket', 'redbull', 'jacket', 'm', 140.99, 'redbull_softshell_jacket.jpg'),
-('Ferrari Classic Cap', 'ferrari', 'cap', 'default', 20.99, 'ferrari_classic_cap.jpg'),
-('Mercedes Grey T-Shirt', 'mercedes', 'tshirt', 'l', 26.99, 'mercedes_grey_tshirt.jpg');
+('Ferrari Team Hoodie', 'ferrari', 'jacket',  6099.99, 'ferrari_hoodie.jpg'),
+('Mercedes Official Cap', 'mercedes', 'cap',  6024.99, 'mercedes_official_cap.jpg'),
+('Red Bull Softshell Jacket', 'redbull', 'jacket',  60140.99, 'redbull_softshell_jacket.jpg'),
+('Ferrari Classic Cap', 'ferrari', 'cap',  6020.99, 'ferrari_classic_cap.jpg'),
+('Mercedes Grey T-Shirt', 'mercedes',  'l', 6026.99, 'mercedes_grey_tshirt.jpg');
+
+
+-- update description
+ALTER TABLE products MODIFY COLUMN description VARCHAR(1000) NOT NULL DEFAULT '
+Experience the excitement of Formula 1 with this premium F1 merchandise designed for passionate motorsport fans. Made from high-quality materials, it offers a perfect combination of style, comfort, and durability. The detailed design and bold colors let you show support for your favorite team with pride. Whether you are at a race, watching from home, or adding to your collection, this is a must-have for any F1 enthusiast. Perfect for casual wear or gifting, this merchandise brings the energy of the track to your everyday life. Get ready to stand out and celebrate the spirit of racing.
+'
