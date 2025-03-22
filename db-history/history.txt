@@ -80,3 +80,29 @@ ALTER TABLE products
 ADD COLUMN category VARCHAR(100) NOT NULL,
 ADD COLUMN brand VARCHAR(100) NOT NULL,
 MODIFY COLUMN size ENUM('default', 's', 'm', 'l', 'xl') NOT NULL DEFAULT 'default';
+
+-- some products
+INSERT INTO products (name, brand, category, size, price, image) VALUES
+('Ferrari Red T-Shirt', 'ferrari', 'tshirt', 'M', 25.99, 'ferrari_tshirt.jpg'),
+('Mercedes Black T-Shirt', 'mercedes', 'tshirt', 'L', 22.99, 'mercedes_tshirt.jpg'),
+('Red Bull Racing Cap', 'redbull', 'cap', 'default', 18.99, 'redbull_cap.jpg'),
+('Ferrari Sports Jacket', 'ferrari', 'jacket', 'XL', 79.99, 'ferrari_jacket.jpg'),
+('Mercedes Grey Cap', 'mercedes', 'cap', 'default', 19.99, 'mercedes_cap.jpg'),
+
+('Red Bull Blue Jacket', 'redbull', 'jacket', 'M', 89.99, 'redbull_jacket.jpg'),
+('Ferrari Polo T-Shirt', 'ferrari', 'tshirt', 'S', 29.99, 'ferrari_polo.jpg'),
+('Mercedes White Jacket', 'mercedes', 'jacket', 'L', 95.99, 'mercedes_jacket.jpg'),
+('Red Bull Casual T-Shirt', 'redbull', 'tshirt', 'M', 20.99, 'redbull_tshirt.jpg'),
+('Ferrari Limited Edition Cap', 'ferrari', 'cap', 'default', 27.99, 'ferrari_cap.jpg'),
+
+('Mercedes Performance Jacket', 'mercedes', 'jacket', 'XL', 120.99, 'mercedes_performance_jacket.jpg'),
+('Red Bull Official Racing Jacket', 'redbull', 'jacket', 'L', 129.99, 'redbull_racing_jacket.jpg'),
+('Ferrari Track Jacket', 'ferrari', 'jacket', 'M', 110.99, 'ferrari_track_jacket.jpg'),
+('Mercedes Premium T-Shirt', 'mercedes', 'tshirt', 'S', 35.99, 'mercedes_premium_tshirt.jpg'),
+('Red Bull Driver Cap', 'redbull', 'cap', 'default', 22.99, 'redbull_driver_cap.jpg'),
+
+('Ferrari Team Hoodie', 'ferrari', 'jacket', 'XL', 99.99, 'ferrari_hoodie.jpg'),
+('Mercedes Official Cap', 'mercedes', 'cap', 'default', 24.99, 'mercedes_official_cap.jpg'),
+('Red Bull Softshell Jacket', 'redbull', 'jacket', 'M', 140.99, 'redbull_softshell_jacket.jpg'),
+('Ferrari Classic Cap', 'ferrari', 'cap', 'default', 20.99, 'ferrari_classic_cap.jpg'),
+('Mercedes Grey T-Shirt', 'mercedes', 'tshirt', 'L', 26.99, 'mercedes_grey_tshirt.jpg');

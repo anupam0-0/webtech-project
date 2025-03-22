@@ -11,7 +11,7 @@ if ($conn->connect_error) {
 } else {
 ?>
     <nav style='
-        color: black; 
+        color: white; 
         height: 4em; 
         padding: 0 4em;
         display:flex; align-items: center;
@@ -27,7 +27,7 @@ if ($conn->connect_error) {
     </div> 
     <div>
         <a href="index.php"
-            style='padding-right:6rem; font-size:1.8rem; font-weight:500; font-family:monospace; color: black; text-decoration: none;'
+            style='padding-right:6rem; font-size:1.8rem; font-weight:500; font-family:monospace; text-decoration: none; color: black;'
         > Jivilla
         </a>
     </div> 

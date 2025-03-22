@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #fff;
+    color: #111;
     width: 100%;
 }
 
@@ -13,6 +14,34 @@ h1 {
     /* border: 1px solid #333; */
 }
 
+.f1-banner-div{
+    background-color: #111;
+    padding: 4em 2em;
+    height: fit-content;
+}
+
+.f1-banner{
+    background-color: #111;
+}
+
+.shopby-teams{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: auto;
+    justify-content: center;
+}
+
+
+.f1-teams-img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: auto;
+    padding: 10px 0px 0px 15px;
+}
+
+
 .products {
     display: flex;
     flex-wrap: wrap;
@@ -22,6 +51,7 @@ h1 {
 }
 
 .product {
+    height: fit-content;
     background: white;
     border-radius: 10px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
@@ -61,22 +91,21 @@ h1 {
     font-size: 16px;
 }
 
-
-/* Responsive Grid Adjustments
-@media (max-width: 1024px) {
-    .product {
-        flex: 1 1 calc(33.33% - 20px);
-    }
+.categories{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 5rem;
 }
 
-@media (max-width: 768px) {
-    .product {
-        flex: 1 1 calc(50% - 20px);
-    }
+.products-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0px 3rem;
+    /* border: 1px solid #111; */
+    height: 22rem; /* temporary fix */
 }
-
-@media (max-width: 480px) {
-    .product {
-        flex: 1 1 calc(100% - 20px);
-    }
-} */
