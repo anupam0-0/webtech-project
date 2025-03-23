@@ -75,11 +75,10 @@ CREATE TABLE reviews (
 );
 
 
---added catogories, brand, size
+-- added catogories, brand, size
 ALTER TABLE products 
 ADD COLUMN category VARCHAR(100) NOT NULL,
-ADD COLUMN brand VARCHAR(100) NOT NULL,
-MODIFY COLUMN size ENUM('default', 's', 'm', 'l', 'xl') NOT NULL DEFAULT 'default';
+ADD COLUMN brand VARCHAR(100) NOT NULL;
 
 -- some products
 INSERT INTO products (name, brand, category, price, image) VALUES
