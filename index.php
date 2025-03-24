@@ -21,16 +21,22 @@ $redbullProducts = fetchProductsByBrand($conn, "redbull");
 <head>
     <meta charset="UTF-8">
     <title>F1 Store</title>
-    <link rel="icon" href="./images/f1-teams.jpg" type="image/icon type">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-
+    <!-- Main f1 banner -->
     <form class="f1-banner-div">
-        <img class="f1-banner" src="images/f1banner.svg" alt="f1-banner">
+        <img class="f1-banner" src="images/redbull-banner.png" alt="f1-banner">
     </form>
+
+<!-- 
+    IDEA DEPRECATED
+    <div class="snoppy-f1">
+            <img src="images/snoppyf1.jpg" alt="snoppy" height=>
+    </div> 
+-->
 
     <div class="products">
         <?php while ($row = $result->fetch_assoc()) { ?>
@@ -43,12 +49,13 @@ $redbullProducts = fetchProductsByBrand($conn, "redbull");
         <?php } ?>
     </div>
 
-
+    <!-- shop by team banner -->
     <div class="shopby-teams">
         <a href="products.php">
             <img class="f1-teams-img" src="images/shopbyteams2.png" alt="f1-teams">
         </a>
     </div>
+
 
 
     <div class="categories">
