@@ -10,10 +10,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } else {
     ?>
-    <nav style='
-        background-color: #111;
-
-    '>
+    <nav style='background-color: #000;'>
         <div style="display:flex; 
         align-items: center;
         max-width: 80em;

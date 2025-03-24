@@ -26,11 +26,27 @@ $redbullProducts = fetchProductsByBrand($conn, "redbull");
 
 <body>
 
-    <!-- Main f1 banner -->
-    <form class="f1-banner-div">
-        <img class="f1-banner" src="images/redbull-banner.png" alt="f1-banner">
-    </form>
 
+
+    <!-- Main f1 banner -->
+    <div class="f1-banner-div">
+        <img class="f1-banner" src="images/redbull-banner.png" alt="f1-banner">
+        <div class="banner-text">
+        <h1>Your Ultimate Pit Stop for F1 Gear!</h1>
+        <button>Shop Now</button>
+        </div>
+    </div>
+
+
+    <div class="category-row">
+        <li>shop by team</li>
+        <li>shop by driver</li>
+        <li>men</li>
+        <li>women</li>
+        <li>kids</li>
+        <li>headwear</li>
+        <li>collectibles</li>
+    </div>
 <!-- 
     IDEA DEPRECATED
     <div class="snoppy-f1">

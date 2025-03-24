@@ -7,55 +7,62 @@ $brand = isset($_GET['brand']) ? $_GET['brand'] : '';
 $size = isset($_GET['size']) ? $_GET['size'] : '';
 
 $sql = "SELECT * FROM products WHERE 1";
-if ($category) $sql .= " AND category = '$category'";
-if ($brand) $sql .= " AND brand = '$brand'";
+if ($category)
+    $sql .= " AND category = '$category'";
+if ($brand)
+    $sql .= " AND brand = '$brand'";
 
 $result = $conn->query($sql);
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Products</title>
     <link rel="stylesheet" href="css/products.css">
 </head>
+
 <body>
+    <main>
 
-    <h2>Shop Products</h2>
+        <h2>Shop Products</h2>
 
-    <form method="GET" action="products.php" class="filter-form">
-        <select name="category">
-            <option value="">All Categories</option>
-            <option value="tshirt">T-Shirt</option>
-            <option value="cap">Cap</option>
-            <option value="jacket">Jacket</option>
-        </select>
+        <form method="GET" action="products.php" class="filter-form">
+            <select name="category">
+                <option value="">All Categories</option>
+                <option value="tshirt">T-Shirt</option>
+                <option value="cap">Cap</option>
+                <option value="jacket">Jacket</option>
+            </select>
 
-        <select name="brand">
-            <option value="">All Brands</option>
-            <option value="redbull">Red Bull</option>
-            <option value="ferrari">Ferrari</option>
-            <option value="mclaren">McLaren</option>
-            <option value="mercedes">Mercedes</option>
-        </select>
+            <select name="brand">
+                <option value="">All Brands</option>
+                <option value="redbull">Red Bull</option>
+                <option value="ferrari">Ferrari</option>
+                <option value="mclaren">McLaren</option>
+                <option value="mercedes">Mercedes</option>
+            </select>
 
-        <button type="submit">Filter</button>
-    </form>
+            <button type="submit">Filter</button>
+        </form>
 
-    <div class="product-grid">
-        <?php while ($row = $result->fetch_assoc()) { ?>
-            <div class="product">
-                <img src="images/<?php echo $row['image']; ?>" alt="Product Image">
-                <p><strong><?php echo $row['name']; ?></strong></p>
-                <p>Price: $<?php echo $row['price']; ?></p>
-                <form method="POST" action="cart.php">
-                    <input type="hidden" name="product_id" value="<?php echo $row['id']; ?>">
-                    <button type="submit">Add to Cart</button>
-                </form>
-            </div>
-        <?php } ?>
-    </div>
+        <div class="product-grid">
+            <?php while ($row = $result->fetch_assoc()) { ?>
+                <div class="product">
+                    <img src="images/<?php echo $row['image']; ?>" alt="Product Image">
+                    <p><strong><?php echo $row['name']; ?></strong></p>
+                    <p>Price: $<?php echo $row['price']; ?></p>
+                    <form method="POST" action="cart.php">
+                        <input type="hidden" name="product_id" value="<?php echo $row['id']; ?>">
+                        <button type="submit">Add to Cart</button>
+                    </form>
+                </div>
+            <?php } ?>
+        </div>
+    </main>
 
 </body>
+
 </html>
