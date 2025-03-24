@@ -53,7 +53,7 @@ $result = $conn->query($sql);
                 <div class="product">
                     <img src="images/<?php echo $row['image']; ?>" alt="Product Image">
                     <p><strong><?php echo $row['name']; ?></strong></p>
-                    <p>Price: $<?php echo $row['price']; ?></p>
+                    <p>Price: ₹<?php echo $row['price']; ?></p>
 
 
                     <!-- we can't add item directly into cart 'cause the user hasnt't chose the size  -->

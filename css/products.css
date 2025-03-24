@@ -35,9 +35,12 @@ h2 {
 
 /* Product Grid */
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
     padding: 20px;
 }
 
@@ -49,9 +52,10 @@ h2 {
     /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
     text-align: center;
     overflow: hidden;
-    min-width: 13em;
+    min-width: 12em;
     max-width: 18rem;
     width: 100%;
+    margin-bottom: 20px;
 }
 
 .product img {
@@ -59,10 +63,13 @@ h2 {
     max-height: 200px;
     object-fit: contain;
     border-radius: 5px;
+    margin-bottom: 20px;
+
 }
 
 .product p {
-    margin: 10px 0;
+    margin: -4px 0 10px;
+    text-align: center;
 }
 
 .product form {
@@ -72,6 +79,8 @@ h2 {
 .button-container{
     background-color: #111;
     border-radius: 5px;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .product a{

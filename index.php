@@ -32,13 +32,13 @@ $redbullProducts = fetchProductsByBrand($conn, "redbull");
     <div class="f1-banner-div">
         <img class="f1-banner" src="images/redbull-banner.png" alt="f1-banner">
         <div class="banner-text">
-        <h1>Your Ultimate Pit Stop for F1 Gear!</h1>
-        <button>Shop Now</button>
+            <h1>Your Ultimate Pit Stop for F1 Gear!</h1>
+            <button>Shop Now</button>
         </div>
     </div>
 
 
-    <div class="category-row" >
+    <div class="category-row">
         <a href="products.php">shop by team</a>
         <a href="products.php">shop by driver</a>
         <a href="products.php">men</a>
@@ -47,7 +47,7 @@ $redbullProducts = fetchProductsByBrand($conn, "redbull");
         <a href="products.php">headwear</a>
         <a href="products.php">collectibles</a>
     </div>
-<!-- 
+    <!-- 
     IDEA DEPRECATED
     <div class="snoppy-f1">
             <img src="images/snoppyf1.jpg" alt="snoppy" height=>
@@ -90,7 +90,9 @@ $redbullProducts = fetchProductsByBrand($conn, "redbull");
                 </div>
             <?php } ?>
         </div>
-        <button class="view-more">View More</button>
+        <a href="products.php" style="text-decoration: none;">
+            <button class="view-more">View More</button>
+        </a>
 
 
         <h2>Mercedes Collection</h2>
@@ -104,8 +106,9 @@ $redbullProducts = fetchProductsByBrand($conn, "redbull");
                 </div>
             <?php } ?>
         </div>
-        <button class="view-more">View More</button>
-
+        <a href="products.php" style="text-decoration: none;">
+            <button class="view-more">View More</button>
+        </a>
 
         <h2>Red Bull Collection</h2>
         <div class="products-grid">
@@ -118,8 +121,9 @@ $redbullProducts = fetchProductsByBrand($conn, "redbull");
                 </div>
             <?php } ?>
         </div>
-        <button class="view-more">View More</button>
-
+        <a href="products.php" style="text-decoration: none;">
+            <button class="view-more">View More</button>
+        </a>
     </div>
 </body>
 
