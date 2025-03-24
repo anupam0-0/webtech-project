@@ -38,14 +38,14 @@ $redbullProducts = fetchProductsByBrand($conn, "redbull");
     </div>
 
 
-    <div class="category-row">
-        <li>shop by team</li>
-        <li>shop by driver</li>
-        <li>men</li>
-        <li>women</li>
-        <li>kids</li>
-        <li>headwear</li>
-        <li>collectibles</li>
+    <div class="category-row" >
+        <a href="products.php">shop by team</a>
+        <a href="products.php">shop by driver</a>
+        <a href="products.php">men</a>
+        <a href="products.php">women</a>
+        <a href="products.php">kids</a>
+        <a href="products.php">headwear</a>
+        <a href="products.php">collectibles</a>
     </div>
 <!-- 
     IDEA DEPRECATED

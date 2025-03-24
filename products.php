@@ -54,10 +54,20 @@ $result = $conn->query($sql);
                     <img src="images/<?php echo $row['image']; ?>" alt="Product Image">
                     <p><strong><?php echo $row['name']; ?></strong></p>
                     <p>Price: $<?php echo $row['price']; ?></p>
-                    <form method="POST" action="cart.php">
+
+
+                    <!-- we can't add item directly into cart 'cause the user hasnt't chose the size  -->
+                    <!-- so instead we redirect user to the product page so that he/she can chose th size -->
+                    <!-- WE WILL CHANGE IT LATER -->
+                    <!-- <form method="POST" action="cart.php">
                         <input type="hidden" name="product_id" value="<?php echo $row['id']; ?>">
                         <button type="submit">Add to Cart</button>
-                    </form>
+                    </form> -->
+                    <div class="button-container">
+                        <a href="product.php?id=<?php echo $row['id']; ?>" class="add-to-cart-btn">
+                            Add to Cart
+                        </a>
+                    </div>
                 </div>
             <?php } ?>
         </div>
