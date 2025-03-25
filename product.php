@@ -67,14 +67,14 @@ $reviews = $conn->query($review_sql);
                         <option value="l">L</option>
                         <option value="xl">XL</option>
                     </select> <br>
-                    <button type="submit">Add to Cart</button>
+                    <button class="add-to-cart" type="submit">Add to Cart</button>
                 </form>
 
                 <h3>Reviews:</h3>
                 <?php if ($reviews->num_rows > 0) { ?>
                     <ul style="list-style-type: none;">
                         <?php while ($row = $reviews->fetch_assoc()) { ?>
-                            <li>
+                            <li class="review-item">
                                 <strong><?php echo $row["name"]; ?></strong> ⭐<?php echo $row["rating"]; ?>/5 <br>
                                 <?php echo $row["review"]; ?> <br>
                                 <small><?php echo $row["review_date"]; ?></small>

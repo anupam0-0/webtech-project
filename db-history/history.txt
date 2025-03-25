@@ -109,5 +109,23 @@ INSERT INTO products (name, brand, category, price, image) VALUES
 
 -- update description
 ALTER TABLE products MODIFY COLUMN description VARCHAR(1000) NOT NULL DEFAULT '
-Experience the excitement of Formula 1 with this premium F1 merchandise designed for passionate motorsport fans. Made from high-quality materials, it offers a perfect combination of style, comfort, and durability. The detailed design and bold colors let you show support for your favorite team with pride. Whether you are at a race, watching from home, or adding to your collection, this is a must-have for any F1 enthusiast. Perfect for casual wear or gifting, this merchandise brings the energy of the track to your everyday life. Get ready to stand out and celebrate the spirit of racing.
-'
+Experience the excitement of Formula 1 with this premium F1 merchandise designed for passionate motorsport fans. Made from high-quality materials, it offers a perfect combination of style, comfort, and durability. The detailed design and bold colors let you show support for your favorite team with pride. Whether you are at a race, watching from home, or adding to your collection, this is a must-have for any F1 enthusiast. Perfect for casual wear or gifting, this merchandise brings the energy of the track to your everyday life. Get ready to stand out and celebrate the spirit of racing.';
+
+
+-- create table collection
+CREATE TABLE collection(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100),
+    image VARCHAR(100)
+);
+
+
+-- insert data of collection
+INSERT INTO collection (name, image) VALUES 
+("Drive to survive collection", "collection-drive-to-surive.png"), 
+("F175", "F175.png"), 
+("Ferrai Teamwear", "ferrari-teamwear.png"), 
+("Campus Collection", "campus-collection.png"),
+("Graphic Collection", "graphic-collection.png"), 
+("Latest Headwear", "latest-headwear.png"),
+("Mini Helmet Collection", "mini-helmet.png" );

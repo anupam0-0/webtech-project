@@ -48,3 +48,32 @@ h1{
 .size-select:focus{
     border: 0px solid #111;
 }
+
+.review-item{
+    border: 1.5px solid #111;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+
+}
+
+.add-to-cart{
+    background-color: #111;
+    color: #fff;
+    padding: 8px 12px;
+}
+
+
+p{
+    font-family: monospace, 'Arial', sans-serif;
+    font-size: 1.2em;
+    color: #333;
+}
+
+
+button{
+    padding: 5px 10px;
+    border: 2px solid #111;
+    width: max-content;
+    background-color: #fff;
+    color: #111;
+}

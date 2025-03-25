@@ -2,7 +2,7 @@
 include "config/db.php";
 session_start();
 
-$sql = "SELECT * FROM products LIMIT 3";
+$sql = "SELECT * FROM collection";
 $result = $conn->query($sql);
 function fetchProductsByBrand($conn, $brand)
 {
@@ -54,13 +54,14 @@ $redbullProducts = fetchProductsByBrand($conn, "redbull");
     </div> 
 -->
 
-    <div class="products">
+    <div class="collections">
         <?php while ($row = $result->fetch_assoc()) { ?>
-            <div class="product">
-                <img src="images/<?php echo $row['image']; ?>" alt="<?php echo $row['name']; ?>">
-                <h2><?php echo $row['name']; ?></h2>
-                <p>₹<?php echo $row['price']; ?></p>
-                <a href="product.php?id=<?php echo $row['id']; ?>">View Details</a>
+            <div class="collection-items">
+                <a href="products.php">
+                <img src="images/collection/<?php echo $row['image']; ?>" alt="<?php echo $row['name']; ?>">
+                <!-- <h2><?php echo $row['name']; ?></h2> -->
+                <!-- <a href="product.php?id=<?php echo $row['id']; ?>">View Details</a> -->
+                </a>
             </div>
         <?php } ?>
     </div>
@@ -125,6 +126,13 @@ $redbullProducts = fetchProductsByBrand($conn, "redbull");
             <button class="view-more">View More</button>
         </a>
     </div>
+
+
+    <footer>
+        <!-- <div>hi</div> -->
+        <img src="images/footer0.png" alt="footer">
+        <img src="images/footer.png" alt="footer">
+    </footer>
 </body>
 
 </html>
