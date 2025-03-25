@@ -51,7 +51,7 @@ $result = $conn->query($sql);
         <div class="product-grid">
             <?php while ($row = $result->fetch_assoc()) { ?>
                 <div class="product">
-                    <img src="images/<?php echo $row['image']; ?>" alt="Product Image">
+                    <img src="images/merch/<?php echo $row['image']; ?>" alt="Product Image">
                     <p><strong><?php echo $row['name']; ?></strong></p>
                     <p>Price: ₹<?php echo $row['price']; ?></p>
 

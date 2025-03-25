@@ -90,7 +90,7 @@ if (!empty($cart_items)) {
                         $total_price += $total;
                         ?>
                         <tr class="product-row">
-                            <td id="img-td"><img src="images/<?php echo $product["image"]; ?>"
+                            <td id="img-td"><img src="images/merch/<?php echo $product["image"]; ?>"
                                     alt="<?php echo $product["name"]; ?>"></td>
                             <td><?php echo $product["name"]; ?></td>
                             <td>₹ <?php echo $product["price"]; ?> </td>

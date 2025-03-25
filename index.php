@@ -84,7 +84,7 @@ $redbullProducts = fetchProductsByBrand($conn, "redbull");
         <div class="products-grid">
             <?php while ($row = $ferrariProducts->fetch_assoc()) { ?>
                 <div class="product">
-                    <img src="images/<?php echo $row['image']; ?>" alt="Ferrari Product">
+                    <img src="images/merch/<?php echo $row['image']; ?>" alt="Ferrari Product">
                     <h3><?php echo $row['name']; ?></h3>
                     <p>₹ <?php echo $row['price']; ?></p>
                     <a href="product.php?id=<?php echo $row['id']; ?>">View Details</a>
@@ -100,7 +100,7 @@ $redbullProducts = fetchProductsByBrand($conn, "redbull");
         <div class="products-grid">
             <?php while ($row = $mercedesProducts->fetch_assoc()) { ?>
                 <div class="product">
-                    <img src="images/<?php echo $row['image']; ?>" alt="Mercedes Product">
+                    <img src="images/merch/<?php echo $row['image']; ?>" alt="Mercedes Product">
                     <h3><?php echo $row['name']; ?></h3>
                     <p>₹ <?php echo $row['price']; ?></p>
                     <a href="product.php?id=<?php echo $row['id']; ?>">View Details</a>
@@ -115,7 +115,7 @@ $redbullProducts = fetchProductsByBrand($conn, "redbull");
         <div class="products-grid">
             <?php while ($row = $redbullProducts->fetch_assoc()) { ?>
                 <div class="product">
-                    <img src="images/<?php echo $row['image']; ?>" alt="Red Bull Product">
+                    <img src="images/merch/<?php echo $row['image']; ?>" alt="Red Bull Product">
                     <h3><?php echo $row['name']; ?></h3>
                     <p>₹ <?php echo $row['price']; ?></p>
                     <a href="product.php?id=<?php echo $row['id']; ?>">View Details</a>

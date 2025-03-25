@@ -42,14 +42,14 @@ $reviews = $conn->query($review_sql);
             <div class="left-main">
 
 
-                <img src="images/<?php echo $product["image"]; ?>" alt="<?php echo $product["name"]; ?>">
+                <img src="images/merch/<?php echo $product["image"]; ?>" alt="<?php echo $product["name"]; ?>">
             </div>
 
             <div class="right-main">
 
                 <form action="wishlist_add.php" method="POST">
                     <input type="hidden" name="product_id" value="<?php echo $product["id"]; ?>">
-                    <button type="submit">Add to Wishlist ❤️</button>
+                    <button type="submit" style="cursor: pointer;" >Add to Wishlist ❤️</button>
                 </form>
 
                 <p><?php echo $product["description"]; ?></p>
@@ -67,7 +67,7 @@ $reviews = $conn->query($review_sql);
                         <option value="l">L</option>
                         <option value="xl">XL</option>
                     </select> <br>
-                    <button class="add-to-cart" type="submit">Add to Cart</button>
+                    <button class="add-to-cart" style="cursor: pointer;" type="submit">Add to Cart</button>
                 </form>
 
                 <h3>Reviews:</h3>

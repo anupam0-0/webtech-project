@@ -36,7 +36,7 @@ if (!empty($wishlist_items)) {
             <ul class="wishlist-list">
                 <?php foreach ($products as $product) { ?>
                     <li class="wishlist-item">
-                        <img src="images/<?php echo $product["image"]; ?>" class="wishlist-img">
+                        <img src="images/merch/<?php echo $product["image"]; ?>" class="wishlist-img">
                         <div class="wishlist-details">
                             <span class="wishlist-name"><?php echo $product["name"]; ?></span>
                             <span class="wishlist-price">₹ <?php echo $product["price"]; ?></span>

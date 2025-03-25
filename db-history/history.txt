@@ -82,29 +82,29 @@ ADD COLUMN brand VARCHAR(100) NOT NULL;
 
 -- some products
 INSERT INTO products (name, brand, category, price, image) VALUES
-('Ferrari Red T-Shirt', 'ferrari', 'tshirt', 8025.99, 'ferrari.png'),
-('Mercedes Black T-Shirt', 'mercedes', 'tshirt', 6022.99, 'mercedes_tshirt.jpg'),
-('Red Bull Racing Cap', 'redbull', 'cap', 6018.99, 'redbull_cap.jpg'),
-('Ferrari Sports Jacket', 'ferrari', 'jacket',  6079.99, 'ferrari_jacket.jpg'),
-('Mercedes Grey Cap', 'mercedes', 'cap',  6019.99, 'mercedes_cap.jpg'),
+('Ferrari Red T-Shirt', 'ferrari', 'tshirt', 8025.99, 'ferrari_tshirt.png'),
+('Mercedes Black T-Shirt', 'mercedes', 'tshirt', 6022.99, 'mercedes_tshirt.png'),
+('Red Bull Racing Cap', 'redbull', 'cap', 6018.99, 'redbull_cap.png'),
+('Ferrari Sports Jacket', 'ferrari', 'jacket',  6079.99, 'ferrari_jacket.png'),
+('Mercedes Grey Cap', 'mercedes', 'cap',  6019.99, 'mercedes_cap.png'),
 
-('Red Bull Blue Jacket', 'redbull', 'jacket', 6089.99, 'redbull_jacket.jpg'),
-('Ferrari Polo T-Shirt', 'ferrari', 'tshirt', 6029.99, 'ferrari_polo.jpg'),
-('Mercedes White Jacket', 'mercedes', 'jacket',  6095.99, 'mercedes_jacket.jpg'),
-('Red Bull Casual T-Shirt', 'redbull', 'tshirt', 6020.99, 'redbull_tshirt.jpg'),
-('Ferrari Limited Edition Cap', 'ferrari', 'cap',  6027.99, 'ferrari_cap.jpg'),
+('Red Bull Blue Jacket', 'redbull', 'jacket', 6089.99, 'redbull_jacket.png'),
+('Ferrari Polo T-Shirt', 'ferrari', 'tshirt', 6029.99, 'ferrari_polo.png'),
+('Mercedes White Jacket', 'mercedes', 'jacket',  6095.99, 'mercedes_jacket.png'),
+('Red Bull Casual T-Shirt', 'redbull', 'tshirt', 6020.99, 'redbull_tshirt.png'),
+('Ferrari Limited Edition Cap', 'ferrari', 'cap',  6027.99, 'ferrari_cap.png'),
 
-('Mercedes Performance Jacket', 'mercedes', 'jacket', 60120.99, 'mercedes_performance_jacket.jpg'),
-('Red Bull Official Racing Jacket', 'redbull', 'jacket', 60129.99, 'redbull_racing_jacket.jpg'),
-('Ferrari Track Jacket', 'ferrari', 'jacket',  60110.99, 'ferrari_track_jacket.jpg'),
-('Mercedes Premium T-Shirt', 'mercedes', 'tshirt', 6035.99, 'mercedes_premium_tshirt.jpg'),
-('Red Bull Driver Cap', 'redbull', 'cap', 6022.99, 'redbull_driver_cap.jpg'),
+('Mercedes Performance Jacket', 'mercedes', 'jacket', 60120.99, 'mercedes_hoodie.png'),
+('Red Bull Official Racing Jacket', 'redbull', 'jacket', 60129.99, 'redbull_racing_jacket.png'),
+('Ferrari Track Jacket', 'ferrari', 'jacket',  60110.99, 'ferrari_track_jacket.png'),
+('Mercedes Premium T-Shirt', 'mercedes', 'tshirt', 6035.99, 'mercedes_premium_tshirt.png'),
+('Red Bull Driver Cap', 'redbull', 'cap', 6022.99, 'redbull_driver_cap.png'),
 
 ('Ferrari Team Hoodie', 'ferrari', 'jacket',  6099.99, 'ferrari_hoodie.jpg'),
-('Mercedes Official Cap', 'mercedes', 'cap',  6024.99, 'mercedes_official_cap.jpg'),
+('Mercedes Russell Cap', 'mercedes', 'cap',  6024.99, 'mercedes_russell_cap.png'),
 ('Red Bull Softshell Jacket', 'redbull', 'jacket',  60140.99, 'redbull_softshell_jacket.jpg'),
-('Ferrari Classic Cap', 'ferrari', 'cap',  6020.99, 'ferrari_classic_cap.jpg'),
-('Mercedes Grey T-Shirt', 'mercedes',  'l', 6026.99, 'mercedes_grey_tshirt.jpg');
+('Ferrari Leclrec Cap', 'ferrari', 'cap',  6020.99, 'ferrari_leclrec_cap.png'),
+('Mercedes Grey T-Shirt', 'mercedes',  'l', 6026.99, 'mercedes_grey_tshirt.png');
 
 
 -- update description
