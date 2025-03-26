@@ -1,6 +1,6 @@
-# WebTech Project
+# F1 Merch Store
 
-This project is a web application developed using PHP and CSS, featuring functionalities such as user authentication, product management, shopping cart, and order processing.
+This is an e-commerce website designed for Formula 1 fans to browse and purchase official merchandise. The website features a user-friendly interface, user authentication, product browsing, shopping cart, order placement, product reviewing and wishlist features.
 
 ## Features
 
