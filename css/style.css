@@ -175,7 +175,8 @@ h1 {
     flex: display;
     flex-direction: column;
     justify-content: space-between;
-    /* margin: 0 auto;  TOBE ADDED SOON*/
+    margin: 0 auto;  
+    /* ABOVE TO BE ADDED */
 }
 
 
@@ -233,7 +234,6 @@ h1 {
     margin: 0 auto;
     overflow-x: auto;
 
-    /* padding: 5px; */
 }
 
 .view-more {

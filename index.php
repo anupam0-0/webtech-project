@@ -26,8 +26,6 @@ $redbullProducts = fetchProductsByBrand($conn, "redbull");
 
 <body>
 
-
-
     <!-- Main f1 banner -->
     <div class="f1-banner-div">
         <img class="f1-banner" src="images/redbull-banner.png" alt="f1-banner">
@@ -58,9 +56,9 @@ $redbullProducts = fetchProductsByBrand($conn, "redbull");
         <?php while ($row = $result->fetch_assoc()) { ?>
             <div class="collection-items">
                 <a href="products.php">
-                <img src="images/collection/<?php echo $row['image']; ?>" alt="<?php echo $row['name']; ?>">
-                <!-- <h2><?php echo $row['name']; ?></h2> -->
-                <!-- <a href="product.php?id=<?php echo $row['id']; ?>">View Details</a> -->
+                    <img src="images/collection/<?php echo $row['image']; ?>" alt="<?php echo $row['name']; ?>">
+                    <!-- <h2><?php echo $row['name']; ?></h2> -->
+                    <!-- <a href="product.php?id=<?php echo $row['id']; ?>">View Details</a> -->
                 </a>
             </div>
         <?php } ?>

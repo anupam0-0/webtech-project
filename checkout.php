@@ -71,40 +71,41 @@ if (empty($products)) {
 </head>
 
 <body>
+    <main>
+        <h2>Checkout</h2>
 
-    <h2>Checkout</h2>
-
-    <form action="place_order.php" method="POST">
-        <table>
-            <tr>
-                <th>Product</th>
-                <th>Quantity</th>
-                <th>Total</th>
-            </tr>
-            <?php
-            $total_price = 0;
-            foreach ($products as $product) {
-                $total = $product["price"] * $product["quantity"];
-                $total_price += $total;
-                ?>
+        <form action="place_order.php" method="POST">
+            <table>
                 <tr>
-                    <td><?php echo $product["name"]; ?></td>
-                    <td><?php echo $product["quantity"]; ?></td>
-                    <td>₹ <?php echo $total; ?></td>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
                 </tr>
-            <?php } ?>
-        </table>
+                <?php
+                $total_price = 0;
+                foreach ($products as $product) {
+                    $total = $product["price"] * $product["quantity"];
+                    $total_price += $total;
+                    ?>
+                    <tr>
+                        <td><?php echo $product["name"]; ?></td>
+                        <td><?php echo $product["quantity"]; ?></td>
+                        <td>₹ <?php echo $total; ?></td>
+                    </tr>
+                <?php } ?>
+            </table>
 
-        <div class="checkout-details">
-            <h3 >Total Price: ₹ <?php echo $total_price; ?></h3>
+            <div class="checkout-details">
+                <h3>Total Price: ₹ <?php echo $total_price; ?></h3>
 
-            <label for="address">Shipping Address:</label>
-            <input type="text" name="address" required>
+                <label for="address">Shipping Address:</label>
+                <input type="text" name="address" required>
 
-            <button type="submit">Place Order</button>
-        </div>
+                <button type="submit">Place Order</button>
+            </div>
 
-    </form>
+        </form>
+    </main>
 
 </body>
 
