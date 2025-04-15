@@ -13,7 +13,7 @@ CREATE TABLE products (
     name VARCHAR(100),
     price DECIMAL(10,2),
     image VARCHAR(255),
-    description TEXT
+    description VARCHAR(1000) NOT NULL DEFAULT ' Experience the excitement of Formula 1 with this premium F1 merchandise designed for passionate motorsport fans. Made from high-quality materials, it offers a perfect combination of style, comfort, and durability. The detailed design and bold colors let you show support for your favorite team with pride. Whether you are at a race, watching from home, or adding to your collection, this is a must-have for any F1 enthusiast. Get ready to stand out and celebrate the spirit of racing.'
 );
 
 -- Wishlist Table  
@@ -56,18 +56,12 @@ CREATE TABLE order_items (
     FOREIGN KEY (product_id) REFERENCES products(id)
 );
 
--- some inputs
-INSERT INTO products (name, description, price, image) VALUES
-('Laptop', 'A powerful laptop for work and gaming.', 899.99, 'laptop.jpg'),
-('Smartphone', 'Latest 5G smartphone with amazing features.', 699.99, 'smartphone.jpg'),
-('Headphones', 'Noise-canceling wireless headphones.', 199.99, 'headphones.jpg');
-
 -- review
 CREATE TABLE reviews (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
     product_id INT NOT NULL,
-    rating INT CHECK (rating BETWEEN 1 AND 5), -- Rating from 1 to 5
+    rating INT, -- Rating from 1 to 5
     review TEXT NOT NULL,
     review_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id),
@@ -107,9 +101,6 @@ INSERT INTO products (name, brand, category, price, image) VALUES
 ('Mercedes Grey T-Shirt', 'mercedes',  'l', 6026.99, 'mercedes_grey_tshirt.png');
 
 
--- update description
-ALTER TABLE products MODIFY COLUMN description VARCHAR(1000) NOT NULL DEFAULT '
-Experience the excitement of Formula 1 with this premium F1 merchandise designed for passionate motorsport fans. Made from high-quality materials, it offers a perfect combination of style, comfort, and durability. The detailed design and bold colors let you show support for your favorite team with pride. Whether you are at a race, watching from home, or adding to your collection, this is a must-have for any F1 enthusiast. Perfect for casual wear or gifting, this merchandise brings the energy of the track to your everyday life. Get ready to stand out and celebrate the spirit of racing.';
 
 
 -- create table collection
@@ -122,7 +113,7 @@ CREATE TABLE collection(
 
 -- insert data of collection
 INSERT INTO collection (name, image) VALUES 
-("Drive to survive collection", "collection-drive-to-surive.png"), 
+("Drive to survive collection", "drive-to-surive.png"), 
 ("F175", "F175.png"), 
 ("Ferrai Teamwear", "ferrari-teamwear.png"), 
 ("Campus Collection", "campus-collection.png"),

@@ -52,6 +52,7 @@ $result = $conn->query($sql);
             <?php while ($row = $result->fetch_assoc()) { ?>
                 <div class="product">
                     <img src="images/merch/<?php echo $row['image']; ?>" alt="Product Image">
+
                     <p><strong><?php echo $row['name']; ?></strong></p>
                     <p>Price: ₹<?php echo $row['price']; ?></p>
 

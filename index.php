@@ -89,9 +89,9 @@ $redbullProducts = fetchProductsByBrand($conn, "redbull");
                 </div>
             <?php } ?>
         </div>
-        <a href="products.php" style="text-decoration: none;">
+        <!-- <a href="products.php" style="text-decoration: none; width: fit-content; height: 1.9em; margin: 0 auto;">
             <button class="view-more">View More</button>
-        </a>
+        </a> -->
 
 
         <h2>Mercedes Collection</h2>
@@ -105,9 +105,9 @@ $redbullProducts = fetchProductsByBrand($conn, "redbull");
                 </div>
             <?php } ?>
         </div>
-        <a href="products.php" style="text-decoration: none;">
+        <!-- <a href="products.php" style="text-decoration: none; width: fit-content; height: 1.9em; margin: 0 auto;">
             <button class="view-more">View More</button>
-        </a>
+        </a> -->
 
         <h2>Red Bull Collection</h2>
         <div class="products-grid">
@@ -120,16 +120,16 @@ $redbullProducts = fetchProductsByBrand($conn, "redbull");
                 </div>
             <?php } ?>
         </div>
-        <a href="products.php" style="text-decoration: none;">
+        <!-- <a href="products.php" style="text-decoration: none; width: fit-content; height: 1.9em; margin: 0 auto;">
             <button class="view-more">View More</button>
-        </a>
+        </a> -->
     </div>
 
 
     <footer>
         <!-- <div>hi</div> -->
-        <img src="images/footer0.png" alt="footer">
-        <img src="images/footer.png" alt="footer">
+        <img src="images/footer0.png" alt="footer" draggable="false">
+        <img src="images/footer.png" alt="footer" draggable="false">
     </footer>
 </body>
 

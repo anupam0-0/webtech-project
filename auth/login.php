@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION["user_id"] = $user["id"];
             $_SESSION["user_name"] = $user["name"];
             echo "Login successful!";
-            header('Location: /ecommerce/index.php');
+            header('Location: ../index.php');
             exit();
         } else {
             echo "Invalid password!";

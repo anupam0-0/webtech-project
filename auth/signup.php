@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')";
         if ($conn->query($sql) === TRUE) {
             echo "Signup successful!";
-            header('Location: /ecommerce/auth/login.php');
+            header('Location: login.php');
             exit();
         } else {
             echo "Error: " . $conn->error;
