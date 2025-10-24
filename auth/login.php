@@ -45,58 +45,66 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         body {
-
             position: relative;
             top: -7rem;
-
+            background: #111
         }
 
         .login-container {
-            background: white;
             padding: 2rem;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
             border-radius: 10px;
-            text-align: center;
-            width: 300px;
-            margin:0 auto;
-            margin-top: 25vh;
+            /* text-align: center; */
+            width: 500px;
+            margin: 0 auto;
+            margin-top: 22vh;
         }
 
         h2 {
-            margin-bottom: 1.5rem;
-            color: #333;
+            margin-bottom: 1.4rem;
+            color: #ddd;
+            text-align: center;
+
         }
 
         input {
             width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            padding: 1rem;
+            margin: 0.4rem 0;
+            border: 1px solid #333;
+            border-radius: 0.5rem;
             outline: none;
+            font-size: 18px;
+            background: #111;
+            color: #eee;
         }
 
         button {
             width: 100%;
-            padding: 10px;
-            background: #000;
-            color: white;
-            border: none;
-            border-radius: 5px;
+            padding: 0.8rem;
+            background: #ddd;
+            color: #222;
+            border: 1px solid #333;
+            border-radius: 0.5rem;
+            margin: 0.6rem 0;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 20px;
+
+            /* font-family: monospace; */
+            /* font-weight: 700; */
         }
 
         button:hover {
-            background: #222;
+            background: #aaa;
         }
 
         a {
             display: block;
             margin-top: 10px;
-            color: #007bff;
+            color: lightskyblue;
             text-decoration: none;
-            font-size: 14px;
+            font-size: 16px;
+            text-align: right;
         }
 
         a:hover {

@@ -48,12 +48,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         .signup-container {
             background: white;
             padding: 2rem;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
             border-radius: 10px;
             text-align: center;
-            width: 300px;
+            width: 500px;
             margin:0 auto;
-            margin-top: 25vh;
+            margin-top: 22vh;
         }
 
         h2 {
@@ -63,22 +63,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         input {
             width: 100%;
-            padding: 10px;
-            margin: 10px 0;
+            padding: 1rem;
+            margin: 0.4rem 0;
             border: 1px solid #ccc;
             border-radius: 5px;
             outline: none;
+            font-size: 18px;
         }
 
         button {
             width: 100%;
-            padding: 10px;
+            padding: 0.8rem;
             background: #222;
             color: white;
             border: none;
+            margin-top: 0.4rem;
+            margin-bottom: 1rem;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 20px;
             transition: background 0.3s;
         }
 
@@ -88,10 +91,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         a {
             display: block;
-            margin-top: 10px;
             color: #007bff;
+            margin: 0.4rem 0;
             text-decoration: none;
-            font-size: 14px;
+            font-size: 16px;
+            text-align: right;
         }
 
         a:hover {
